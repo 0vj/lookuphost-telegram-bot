@@ -9,7 +9,7 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
-var bot, err = tgbotapi.NewBotAPI("Your Bot Token")
+var bot, err = tgbotapi.NewBotAPI(os.Getenv("BOT_TOKEN"))
 
 func main() {
 	if err != nil {
